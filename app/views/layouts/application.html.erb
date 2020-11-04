@@ -13,10 +13,13 @@
     <div class="header">
       <p><%= link_to  "Indice de Fragilité numérique", root_path %></p>
     </div>
-    <%= yield %>
-    <div class="footer">
-      <%= link_to  "Mentions Légales", mentionsLegales_path %>
-      <%= link_to  "Accueil", root_path %>
+    <div class="maindiv">
+      <%= yield %>
+      <div class="footer">
+      <p>Plan du site :
+      <br><%= link_to  "Mentions Légales", mentionsLegales_path %>
+      <br><%= link_to  "Accueil", root_path %></p>
+    </div>
     </div>
     <div id="cookieconsent">
       <div class="cookieconsentl">
