@@ -1,28 +1,5 @@
-<label for="region">Région:</label><br>
-    <select onChange="toggle_departement(this.value)" name="region">
-        <option value="_blank"></option>
-        <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
-        <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
-        <option value="Bretagne">Bretagne</option>
-        <option value="Centre-Val de Loire">Centre-Val de Loire</option>
-        <option value="Grand Est">Grand Est</option>
-        <option value="Guadeloupe">Guadeloupe</option>
-        <option value="Guyane">Guyane</option>
-        <option value="Hauts-de-France">Hauts-de-France</option>
-        <option value="Île-de-France">Île-de-France</option>
-        <option value="La Corse">La Corse</option>
-        <option value="Martinique">Martinique</option>
-        <option value="Mayotte">Mayotte</option>
-        <option value="Normandie">Normandie</option>
-        <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
-        <option value="Occitanie">Occitanie</option>
-        <option value="Pays de la Loire">Pays de la Loire</option>
-        <option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
-        <option value="Réunion">Réunion</option>
-    </select>
-
-    <input list="regions" name="region" id="regionSelector" onChange="toggle_departement(this.value)">
-    <datalist id="regions">
+    <input list="region" name="region" id="regionSelector" onChange="toggle_departement(this.value)">
+    <datalist id="region">
         <option value="Auvergne-Rhône-Alpes"></option>
         <option value="Bourgogne-Franche-Comté"></option>
         <option value="Bretagne"></option>
@@ -42,6 +19,8 @@
         <option value="Provence-Alpes-Côte d'Azur"></option>
         <option value="Réunion">Réunion</option>
     </datalist>
+
+    <button type="button" onClick="_clear();">Clear</button>
 
     <span id="Auvergne-Rhône-Alpes" style="display:none;">
         Bonjour je suis un gros chapeau.
@@ -251,6 +230,10 @@
         
         function show18(){
             document.getElementById("Réunion").style.display ="inline";
+        }
+
+        function _clear(){
+            document.getElementById("regionSelector").value = "";
         }
 
     </script>
