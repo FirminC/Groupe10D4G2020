@@ -11,8 +11,21 @@
 
   <body>
     <div class="header">
-      <p>Indice de Fragilité numérique</p>
+      <p><%= link_to  "Indice de Fragilité numérique", root_path %></p>
     </div>
     <%= yield %>
+    <div class="footer">
+      <%= link_to  "Mentions Légales", mentionsLegales_path %>
+      <%= link_to  "Accueil", root_path %>
+    </div>
+    <div id="cookieconsent">
+      <div class="cookieconsentl">
+        <p>Ce site web n'utilise et ne demande aucune donnée personnelle.
+            De plus, les cookies utilisés servent uniquement au bon fonctionnement du site.</p>
+      </div>
+      <div class="cookieconsentr">
+        <span id="cookiebutton" onclick="closecookie()">Fermer</span>
+      </div>
+    </div>
   </body>
 </html>
