@@ -1,21 +1,235 @@
 <label for="region">Région:</label><br>
-<select name="region" id="region">
-    <option value="_blank"></option>
-    <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
-    <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
-    <option value="Bretagne">Bretagne</option>
-    <option value="Centre-Val de Loire">Centre-Val de Loire</option>
-    <option value="Grand Est">Grand Est</option>
-    <option value="Guadeloupe">Guadeloupe</option>
-    <option value="Guyane">Guyane</option>
-    <option value="Hauts-de-France">Hauts-de-France</option>
-    <option value="Île-de-France">Île-de-France</option>
-    <option value="La Corse">La Corse</option>
-    <option value="Martinique">Martinique</option>
-    <option value="Mayotte">Mayotte</option>
-    <option value="Normandie">Normandie</option>
-    <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
-    <option value="Occitanie">Occitanie</option>
-    <option value="Pays de la Loire">Pays de la Loire</option>
-    <option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
-    <option value="Réunion">Réunion</option>
+    <select onChange="toggle_departement(this.value)" name="region">
+        <option value="_blank"></option>
+        <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
+        <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
+        <option value="Bretagne">Bretagne</option>
+        <option value="Centre-Val de Loire">Centre-Val de Loire</option>
+        <option value="Grand Est">Grand Est</option>
+        <option value="Guadeloupe">Guadeloupe</option>
+        <option value="Guyane">Guyane</option>
+        <option value="Hauts-de-France">Hauts-de-France</option>
+        <option value="Île-de-France">Île-de-France</option>
+        <option value="La Corse">La Corse</option>
+        <option value="Martinique">Martinique</option>
+        <option value="Mayotte">Mayotte</option>
+        <option value="Normandie">Normandie</option>
+        <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+        <option value="Occitanie">Occitanie</option>
+        <option value="Pays de la Loire">Pays de la Loire</option>
+        <option value="Provence-Alpes-Côte d'Azur">Provence-Alpes-Côte d'Azur</option>
+        <option value="Réunion">Réunion</option>
+    </select>
+
+    <span id="Auvergne-Rhône-Alpes" style="display:none;">
+        Bonjour je suis un gros chapeau.
+    </span>
+
+    <span id="Bourgogne-Franche-Comté" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Bretagne" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Centre-Val de Loire" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Grand Est" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Guadeloupe" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Guyane" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Hauts-de-France" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Île-de-France" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="La Corse" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Martinique" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Mayotte" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Normandie" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Nouvelle-Aquitaine" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Occitanie" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Pays de la Loire" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Provence-Alpes-Côte d'Azur" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    <span id="Réunion" style="display:none;">
+        Bonjour je suis un gros chapeau 2.
+    </span>
+
+    
+
+
+
+    <script type="text/javascript">
+        function toggle_departement(param){
+            document.getElementById("Auvergne-Rhône-Alpes").style.display ="none";
+            document.getElementById("Bourgogne-Franche-Comté").style.display ="none";
+            document.getElementById("Bretagne").style.display ="none";
+            document.getElementById("Centre-Val de Loire").style.display ="none";
+            document.getElementById("Grand Est").style.display ="none";
+            document.getElementById("Guadeloupe").style.display ="none";
+            document.getElementById("Guyane").style.display ="none";
+            document.getElementById("Hauts-de-France").style.display ="none";
+            document.getElementById("Île-de-France").style.display ="none";
+            document.getElementById("La Corse").style.display ="none";
+            document.getElementById("Martinique").style.display ="none";
+            document.getElementById("Mayotte").style.display ="none";
+            document.getElementById("Normandie").style.display ="none";
+            document.getElementById("Nouvelle-Aquitaine").style.display ="none";
+            document.getElementById("Occitanie").style.display ="none";
+            document.getElementById("Pays de la Loire").style.display ="none";
+            document.getElementById("Provence-Alpes-Côte d'Azur").style.display ="none";
+            document.getElementById("Réunion").style.display ="none";
+
+            switch (param){
+                case "Auvergne-Rhône-Alpes" :           show1();
+                                                        break;
+                case "Bourgogne-Franche-Comté" :        show2();
+                                                        break;
+                case "Bretagne" :                       show3();
+                                                        break;
+                case "Centre-Val de Loire" :            show4();
+                                                        break;
+                case "Grand Est" :                      show5();
+                                                        break;
+                case "Guadeloupe" :                     show6();
+                                                        break;
+                case "Guyane" :                         show7();
+                                                        break;
+                case "Hauts-de-France" :                show8();
+                                                        break;
+                case "Île-de-France" :                  show9();
+                                                        break;
+                case "La Corse" :                       show10();
+                                                        break;
+                case "Martinique" :                     show11();
+                                                        break;
+                case "Mayotte" :                        show12();
+                                                        break;
+                case "Normandie" :                      show13();
+                                                        break;
+                case "Nouvelle-Aquitaine" :             show14();
+                                                        break;
+                case "Occitanie" :                      show15();
+                                                        break;
+                case "Pays de la Loire" :               show16();
+                                                        break;
+                case "Provence-Alpes-Côte d'Azur" :     show17();
+                                                        break;
+                case "Réunion" :                        show18();
+                                                        break;
+
+            }
+        }
+
+        function show1(){
+            document.getElementById("Auvergne-Rhône-Alpes").style.display ="inline";
+        }
+
+        function show2(){
+            document.getElementById("Bourgogne-Franche-Comté").style.display ="inline";
+        }
+        
+        function show3(){
+            document.getElementById("Bretagne").style.display ="inline";
+        }
+        
+        function show4(){
+            document.getElementById("Centre-Val de Loire").style.display ="inline";
+        }
+        
+        function show5(){
+            document.getElementById("Grand Est").style.display ="inline";
+        }
+        
+        function show6(){
+            document.getElementById("Guadeloupe").style.display ="inline";
+        }
+        
+        function show7(){
+            document.getElementById("Guyane").style.display ="inline";
+        }
+        
+        function show8(){
+            document.getElementById("Hauts-de-France").style.display ="inline";
+        }
+        
+        function show9(){
+            document.getElementById("Île-de-France").style.display ="inline";
+        }
+        
+        function show10(){
+            document.getElementById("La Corse").style.display ="inline";
+        }
+        
+        function show11(){
+            document.getElementById("Martinique").style.display ="inline";
+        }
+        
+        function show12(){
+            document.getElementById("Mayotte").style.display ="inline";
+        }
+        
+        function show13(){
+            document.getElementById("Normandie").style.display ="inline";
+        }
+        
+        function show14(){
+            document.getElementById("Nouvelle-Aquitaine").style.display ="inline";
+        }
+        
+        function show15(){
+            document.getElementById("Occitanie").style.display ="inline";
+        }
+        
+        function show16(){
+            document.getElementById("Pays de la Loire").style.display ="inline";
+        }
+        
+        function show17(){
+            document.getElementById("Provence-Alpes-Côte d'Azur").style.display ="inline";
+        }
+        
+        function show18(){
+            document.getElementById("Réunion").style.display ="inline";
+        }
+      
+
+    </script>
