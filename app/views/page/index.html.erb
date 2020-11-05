@@ -127,41 +127,53 @@
 
     </select>
 
+    <select id="comcoms">
+        <% @comcoms.each do |comcoms| %>
+            <option id="<%=comcoms.nom_com%>" class="<%=comcoms.nom_com%> commune"><%=comcoms.nom_com%></option>
+        <%end%>
+    </select>
+
+    <select id="communes">
+        <% @communes.each do |communes| %>
+            <option id="<%=communes.nom_com%>" class="<%=communes.nom_com%> commune"><%=communes.nom_com%></option>
+        <%end%>
+    </select>
+
     <%= paginate @scorescommunes %>
 
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Nom de la commune</th>
-        <th>Code de commune</th>
-        <th>Code de département</th>
-        <th>Nom du département</th>
-        <th>Code de la région</th>
-        <th>Population légale</th>
-        <th>Accès interface numérique</th>
-        <th>Accès information</th>
-        <th>Score global accès</th>
-        <th>Compétences administrative</th>
-        <th>Compétences numériques et scolaire</th>
-        <th>Score global compétences</th>
-        <th>Score global</th>
-    </tr>
-    <% @scorescommunes.each do |commune| %>
+    <table>
         <tr>
-            <td><%=commune.id%></td>
-            <td><%=commune.nom_com%></td>
-            <td><%=commune.insee_com%></td>
-            <td><%=commune.insee_dep%></td>
-            <td><%=commune.nom_dep%></td>
-            <td><%=commune.insee_reg%></td>
-            <td><%=commune.poplegal%></td>
-            <td><%=commune.accintnum%></td>
-            <td><%=commune.accinf%></td>
-            <td><%=commune.global_acces%></td>
-            <td><%=commune.comp_admin%></td>
-            <td><%=commune.comp_numsco%></td>
-            <td><%=commune.global_comp%></td>
-            <td><%=commune.score_global%></td>
+            <th>Id</th>
+            <th>Nom de la commune</th>
+            <th>Code de commune</th>
+            <th>Code de département</th>
+            <th>Nom du département</th>
+            <th>Code de la région</th>
+            <th>Population légale</th>
+            <th>Accès interface numérique</th>
+            <th>Accès information</th>
+            <th>Score global accès</th>
+            <th>Compétences administrative</th>
+            <th>Compétences numériques et scolaire</th>
+            <th>Score global compétences</th>
+            <th>Score global</th>
         </tr>
-    <%end%>
-</table>
+        <% @scorescommunes.each do |commune| %>
+            <tr>
+                <td><%=commune.id%></td>
+                <td><%=commune.nom_com%></td>
+                <td><%=commune.insee_com%></td>
+                <td><%=commune.insee_dep%></td>
+                <td><%=commune.nom_dep%></td>
+                <td><%=commune.insee_reg%></td>
+                <td><%=commune.poplegal%></td>
+                <td><%=commune.accintnum%></td>
+                <td><%=commune.accinf%></td>
+                <td><%=commune.global_acces%></td>
+                <td><%=commune.comp_admin%></td>
+                <td><%=commune.comp_numsco%></td>
+                <td><%=commune.global_comp%></td>
+                <td><%=commune.score_global%></td>
+            </tr>
+        <%end%>
+    </table>
