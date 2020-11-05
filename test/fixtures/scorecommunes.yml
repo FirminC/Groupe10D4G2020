@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_com: MyString
+  insee_com: 
+  insee_dep: 
+  nom_dep: MyString
+  insee_reg: MyString
+  poplegal: 
+  accintnum: 1.5
+  accinf: 1.5
+  global_acces: 1.5
+  comp_admin: 1.5
+  comp_numsco: 1.5
+  global_comp: 1.5
+  score_global: 1.5
+
+two:
+  nom_com: MyString
+  insee_com: 
+  insee_dep: 
+  nom_dep: MyString
+  insee_reg: MyString
+  poplegal: 
+  accintnum: 1.5
+  accinf: 1.5
+  global_acces: 1.5
+  comp_admin: 1.5
+  comp_numsco: 1.5
+  global_comp: 1.5
+  score_global: 1.5

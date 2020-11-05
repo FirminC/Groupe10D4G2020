@@ -1,0 +1,2 @@
+class Scorecommune < ApplicationRecord
+end
