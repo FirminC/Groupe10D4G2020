@@ -10,22 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_04_231358) do
+ActiveRecord::Schema.define(version: 2020_11_05_180154) do
 
   create_table "scorecommunes", force: :cascade do |t|
     t.string "nom_com"
-    t.integer "insee_com"
-    t.integer "insee_dep"
+    t.string "nom_iris"
+    t.integer "num_com"
+    t.integer "code_iris"
+    t.integer "pop"
+    t.string "lib_ci"
+    t.integer "num_dep"
     t.string "nom_dep"
-    t.integer "insee_reg"
-    t.integer "poplegal"
-    t.float "accintnum"
-    t.float "accinf"
+    t.integer "num_reg"
+    t.string "nom_reg"
+    t.integer "cp"
+    t.float "acc_intnum"
+    t.float "acc_inf"
     t.float "global_acces"
     t.float "comp_admin"
     t.float "comp_numsco"
     t.float "global_comp"
     t.float "score_global"
+    t.float "moy_dept"
+    t.float "moy_reg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
