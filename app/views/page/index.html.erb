@@ -2,155 +2,154 @@
     <h1>Recherche de votre Commune</h1>
     <div class=filtrep1> 
         <p> Veuillez saisir votre code postale</p>
-        <select id="cp" onChange="toggle_codePostal(this.value)">
-            <option value="_blank">Code Postale</option>
-        </select>
+        <input id="cp">
     </div>
     <div class=filtrep2>
         <p>OU</p>
         <p>Veuillez saisir votre région</p>
 
-        <select id="region" onChange="select_departement(this.value); select_comcoms(this.value); select_communes(this.value)">
-            <option value="_blank"></option>
-            <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
-            <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
-            <option value="Bretagne">Bretagne</option>
-            <option value="Centre-Val-de-Loire">Centre-Val de Loire</option>
-            <option value="Corse">Corse</option>
-            <option value="Grand-Est">Grand Est</option>
-            <option value="Hauts-de-France">Hauts-de-France</option>
-            <option value="Île-de-France">Île-de-France</option>
-            <option value="La-Réunion">La Réunion</option>
-            <option value="Martinique">Martinique</option>
-            <option value="Normandie">Normandie</option>
-            <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
-            <option value="Occitanie">Occitanie</option>
-            <option value="Pays-de-la-Loire">Pays de la Loire</option>
-            <option value="Provence-Alpes-Côte-d'Azur">Provence-Alpes-Côte d'Azur</option>
-
-       </select>
+         <select id="region" onChange="select_communes(this.value); select_comcoms(this.value); select_departement(this.value);">
+        <option value="_blank"></option>
+        <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
+        <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
+        <option value="Bretagne">Bretagne</option>
+        <option value="Centre-Val-de-Loire">Centre-Val de Loire</option>
+        <option value="Corse">Corse</option>
+        <option value="Grand-Est">Grand Est</option>
+        <option value="Hauts-de-France">Hauts-de-France</option>
+        <option value="Île-de-France">Île-de-France</option>
+        <option value="La-Réunion">La Réunion</option>
+        <option value="Martinique">Martinique</option>
+        <option value="Normandie">Normandie</option>
+        <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+        <option value="Occitanie">Occitanie</option>
+        <option value="Pays-de-la-Loire">Pays de la Loire</option>
+        <option value="Provence-Alpes-Côte-d'Azur">Provence-Alpes-Côte d'Azur</option>
+    </select>
 
         <p>Veuillez saisir votre département</p>
 
-        <select id="departement">
-            <option id="_blank" class="Null">Département</option>
-            <option id="Ain" class="Auvergne-Rhône-Alpes departement">Ain</option>
-            <option id="Aisne" class="Hauts-de-France departement">Aisne</option>
-            <option id="Allier" class="Auvergne-Rhône-Alpes departement">Allier</option>
-            <option id="Alpes-de-Haute-Provence" class="Provence-Alpes-Côte-d'Azur departement">Alpes de Haute-Provence</option>
-            <option id="Alpes-Maritimes" class="Provence-Alpes-Côte-d'Azur departement">Alpes-Maritimes</option>
-            <option id="Ardêche" class="Auvergne-Rhône-Alpes departement">Ardêche</option>
-            <option id="Ardennes" class="Grand-Est departement">Ardennes</option>
-            <option id="Ariège" class="Occitanie departement">Ariège</option>
-            <option id="Aube" class="Grand-Est departement">Aube</option>
-            <option id="Aude" class="Occitanie departement">Aude</option>
-            <option id="Aveyron" class="Occitanie departement">Aveyron</option>
-            <option id="Bas-Rhin" class="Grand-Est departement">Bas-Rhin</option>
-            <option id="Bouches-du-Rhône" class="Provence-Alpes-Côte-d'Azur departement">Bouches-du-Rhône</option>
-            <option id="Calvados" class="Normandie departement">Calvados</option>
-            <option id="Cantal" class="Auvergne-Rhône-Alpes departement">Cantal</option>
-            <option id="Charente" class="Nouvelle-Aquitaine departement">Charente</option>
-            <option id="Charente-Maritime" class="Nouvelle-Aquitaine departement">Charente-Maritime</option>
-            <option id="Cher" class="Centre-Val-de-Loire departement">Cher</option>
-            <option id="Corrèze" class="Nouvelle-Aquitaine departement">Corrèze</option>
-            <option id="Corse-du-Sud" class="Corse departement">Corse-du-Sud</option>
-            <option id="Côte-d'Or" class="Bourgogne-Franche-Comté departement">Côte-d'Or</option>
-            <option id="Côtes-d'Armor" class="Bretagne departement">Côtes d'Armor</option>
-            <option id="Creuse" class="Nouvelle-Aquitaine departement">Creuse</option>
-            <option id="Deux-Sèvres" class="Nouvelle-Aquitaine departement">Deux-Sèvres</option>
-            <option id="Dordogne" class="Nouvelle-Aquitaine departement">Dordogne</option>
-            <option id="Doubs" class="Bourgogne-Franche-Comté departement">Doubs</option>
-            <option id="Drôme" class="Auvergne-Rhône-Alpes departement">Drôme</option>
-            <option id="Essonne" class="Île-de-France departement">Essonne</option>
-            <option id="Eure" class="Normandi departement">Eure</option>
-            <option id="Eure-et-Loir" class="Centre-Val-de-Loire departement">Eure-et-Loir</option>
-            <option id="Finistère" class="Bretagne departement">Finistère</option>
-            <option id="Gard" class="Occitanie departement">Gard</option>
-            <option id="Gers" class="Occitanie departement">Gers</option>
-            <option id="Gironde" class="Nouvelle-Aquitaine departement">Gironde</option>
-            <option id="Haute-Corse" class="Corse departement">Haute-Corse</option>       
-            <option id="Haute-Garonne" class="Occitanie departement">Haute-Garonne</option>
-            <option id="Haute-Loire" class="Auvergne-Rhône-Alpes departement">Haute-Loire</option>
-            <option id="Haute-Marne" class="Grand-Est departement">Haute-Marne</option>
-            <option id="Hautes-Alpes" class="Provence-Alpes-Côte-d'Azur departement">Hautes-Alpes</option>
-            <option id="Haute-Saône" class="Bourgogne-Franche-Comté departement">Haute-Saône</option>
-            <option id="Haute-Savoie" class="Auvergne-Rhône-Alpes departement">Haute-Savoie</option>
-            <option id="Hautes-Pyrénées" class="Occitanie departement">Hautes-Pyrénées</option>
-            <option id="Haute-Vienne" class="Nouvelle-Aquitaine departement">Haute-Vienne</option>
-            <option id="Haut-Rhin" class="Grand-Est departement">Haut-Rhin</option>
-            <option id="Hauts-de-Seine" class="Île-de-France departement">Hauts-de-Seine</option>
-            <option id="Hérault" class="Occitanie departement">Hérault</option>
-            <option id="Ille-et-Vilaine" class="Bretagne departement">Ille-et-Vilaine</option>
-            <option id="Indre" class="Centre-Val-de-Loire departement">Indre</option>
-            <option id="Indre-et-Loire" class="Centre-Val-de-Loire departement">Indre-et-Loire</option>
-            <option id="Isère" class="Auvergne-Rhône-Alpes departement">Isère</option>
-            <option id="Jura" class="Bourgogne-Franche-Comté departement">Jura</option>
-            <option id="Landes" class="Nouvelle-Aquitaine departement">Landes</option>
-            <option id="Loire" class="Auvergne-Rhône-Alpes departement">Loire</option>
-            <option id="Loire-Atlantique" class="Pays-de-la-Loire departement">Loire-Atlantique</option>
-            <option id="Loiret" class="Centre-Val-de-Loire departement">Loiret</option>
-            <option id="Loir-et-Cher" class="Centre-Val-de-Loire departement">Loir-et-Cher</option>
-            <option id="Lot" class="Occitanie departement">Lot</option>
-            <option id="Lot-et-Garonne" class="Nouvelle-Aquitaine departement">Lot-et-Garonne</option>
-            <option id="Lozère" class="Occitanie departement">Lozère</option>
-            <option id="Maine-et-Loire" class="Pays-de-la-Loire departement">Maine-et-Loire</option>
-            <option id="Manche" class="Normandie departement">Manche</option>
-            <option id="Marne" class="Grand-Est departement">Marne</option>
-            <option id="Martinique" class="Martinique departement">Martinique</option>
-            <option id="Mayenne" class="Pays-de-la-Loire departement">Mayenne</option>
-            <option id="Meurthe-et-Moselle" class="Grand-Est departement">Meurthe-et-Moselle</option>
-            <option id="Meuse" class="Grand-Est departement">Meuse</option>
-            <option id="Morbihan" class="Bretagne departement">Morbihan</option>
-            <option id="Moselle" class="Grand-Est departement">Moselle</option>
-            <option id="Nièvre" class="Bourgogne-Franche-Comté departement">Nièvre</option>
-            <option id="Nord" class="Hauts-de-France departement">Nord</option>
-            <option id="Oise" class="Hauts-de-France departement">Oise</option>
-            <option id="Orne" class="Normandie departement">Orne</option>
-            <option id="Paris" class="Île-de-France departement">Paris</option>
-            <option id="Pas-de-Calais" class="Hauts-de-France departement">Pas-de-Calais</option>
-            <option id="Puy-de-Dôme" class="Auvergne-Rhône-Alpes departement">Puy-de-Dôme</option>
-            <option id="Pyrénées-Atlantiques" class="Nouvelle-Aquitaine departement">Pyrénées-Atlantiques</option>
-            <option id="Pyrénées-Orientales" class="Occitanie departement">Pyrénées-Orientales</option>
-            <option id="La-Réunion" class="La-Réunion departement">La Réunion</option>
-            <option id="Rhône" class="Auvergne-Rhône-Alpes departement">Rhône</option>
-            <option id="Saône-et-Loire" class="Bourgogne-Franche-Comté departement">Saône-et-Loire</option>
-            <option id="Sarthe" class="Pays-de-la-Loire departement">Sarthe</option>
-            <option id="Savoie" class="Auvergne-Rhône-Alpes departement">Savoie</option>
-            <option id="Seine-et-Marne" class="Île-de-France departement">Seine-et-Marne</option>
-            <option id="Seine-Maritime" class="Normandie departement">Seine-Maritime</option>
-            <option id="Seine-Saint-Denis" class="Île-de-France departement">Seine-Saint-Denis</option>
-            <option id="Somme" class="Hauts-de-France departement">Somme</option>
-            <option id="Tarn" class="Occitanie departement">Tarn</option>
-            <option id="Tarn-et-Garonne" class="Occitanie departement">Tarn-et-Garonne</option>
-            <option id="Territoire-de-Belfort" class="Bourgogne-Franche-Comté departement">Territoire-de-Belfort</option>
-            <option id="Val-de-Marne" class="Île-de-France departement">Val-de-Marne</option>
-            <option id="Val-d'Oise" class="Île-de-France departement">Val-d'Oise</option>
-            <option id="Var" class="Provence-Alpes-Côte-d'Azur departement">Var</option>
-            <option id="Vaucluse" class="Provence-Alpes-Côte-d'Azur departement">Vaucluse</option>
-            <option id="Vendée" class="Pays-de-la-Loire departement">Vendée</option>
-            <option id="Vienne" class="Nouvelle-Aquitaine departement">Vienne</option>
-            <option id="Vosges" class="Grand-Est departement">Vosges</option>
-            <option id="Yonne" class="Bourgogne-Franche-Comté departement">Yonne</option>
-            <option id="Yvelines" class="Île-de-France departement">Yvelines</option>
+    <select id="departement" onChange="select_communes(this.value); select_comcoms(this.value);">
+        <option id="_blank" class="Null"></option>
+        <option id="Ain" class="Auvergne-Rhône-Alpes departement">Ain</option>
+        <option id="Aisne" class="Hauts-de-France departement">Aisne</option>
+        <option id="Allier" class="Auvergne-Rhône-Alpes departement">Allier</option>
+        <option id="Alpes-de-Haute-Provence" class="Provence-Alpes-Côte-d'Azur departement">Alpes de Haute-Provence</option>
+        <option id="Alpes-Maritimes" class="Provence-Alpes-Côte-d'Azur departement">Alpes-Maritimes</option>
+        <option id="Ardêche" class="Auvergne-Rhône-Alpes departement">Ardêche</option>
+        <option id="Ardennes" class="Grand-Est departement">Ardennes</option>
+        <option id="Ariège" class="Occitanie departement">Ariège</option>
+        <option id="Aube" class="Grand-Est departement">Aube</option>
+        <option id="Aude" class="Occitanie departement">Aude</option>
+        <option id="Aveyron" class="Occitanie departement">Aveyron</option>
+        <option id="Bas-Rhin" class="Grand-Est departement">Bas-Rhin</option>
+        <option id="Bouches-du-Rhône" class="Provence-Alpes-Côte-d'Azur departement">Bouches-du-Rhône</option>
+        <option id="Calvados" class="Normandie departement">Calvados</option>
+        <option id="Cantal" class="Auvergne-Rhône-Alpes departement">Cantal</option>
+        <option id="Charente" class="Nouvelle-Aquitaine departement">Charente</option>
+        <option id="Charente-Maritime" class="Nouvelle-Aquitaine departement">Charente-Maritime</option>
+        <option id="Cher" class="Centre-Val-de-Loire departement">Cher</option>
+        <option id="Corrèze" class="Nouvelle-Aquitaine departement">Corrèze</option>
+        <option id="Corse-du-Sud" class="Corse departement">Corse-du-Sud</option>
+        <option id="Côte-d'Or" class="Bourgogne-Franche-Comté departement">Côte-d'Or</option>
+        <option id="Côtes-d'Armor" class="Bretagne departement">Côtes d'Armor</option>
+        <option id="Creuse" class="Nouvelle-Aquitaine departement">Creuse</option>
+        <option id="Deux-Sèvres" class="Nouvelle-Aquitaine departement">Deux-Sèvres</option>
+        <option id="Dordogne" class="Nouvelle-Aquitaine departement">Dordogne</option>
+        <option id="Doubs" class="Bourgogne-Franche-Comté departement">Doubs</option>
+        <option id="Drôme" class="Auvergne-Rhône-Alpes departement">Drôme</option>
+        <option id="Essonne" class="Île-de-France departement">Essonne</option>
+        <option id="Eure" class="Normandi departement">Eure</option>
+        <option id="Eure-et-Loir" class="Centre-Val-de-Loire departement">Eure-et-Loir</option>
+        <option id="Finistère" class="Bretagne departement">Finistère</option>
+        <option id="Gard" class="Occitanie departement">Gard</option>
+        <option id="Gers" class="Occitanie departement">Gers</option>
+        <option id="Gironde" class="Nouvelle-Aquitaine departement">Gironde</option>
+        <option id="Haute-Corse" class="Corse departement">Haute-Corse</option>
+        <option id="Haute-Garonne" class="Occitanie departement">Haute-Garonne</option>
+        <option id="Haute-Loire" class="Auvergne-Rhône-Alpes departement">Haute-Loire</option>
+        <option id="Haute-Marne" class="Grand-Est departement">Haute-Marne</option>
+        <option id="Hautes-Alpes" class="Provence-Alpes-Côte-d'Azur departement">Hautes-Alpes</option>
+        <option id="Haute-Saône" class="Bourgogne-Franche-Comté departement">Haute-Saône</option>
+        <option id="Haute-Savoie" class="Auvergne-Rhône-Alpes departement">Haute-Savoie</option>
+        <option id="Hautes-Pyrénées" class="Occitanie departement">Hautes-Pyrénées</option>
+        <option id="Haute-Vienne" class="Nouvelle-Aquitaine departement">Haute-Vienne</option>
+        <option id="Haut-Rhin" class="Grand-Est departement">Haut-Rhin</option>
+        <option id="Hauts-de-Seine" class="Île-de-France departement">Hauts-de-Seine</option>
+        <option id="Hérault" class="Occitanie departement">Hérault</option>
+        <option id="Ille-et-Vilaine" class="Bretagne departement">Ille-et-Vilaine</option>
+        <option id="Indre" class="Centre-Val-de-Loire departement">Indre</option>
+        <option id="Indre-et-Loire" class="Centre-Val-de-Loire departement">Indre-et-Loire</option>
+        <option id="Isère" class="Auvergne-Rhône-Alpes departement">Isère</option>
+        <option id="Jura" class="Bourgogne-Franche-Comté departement">Jura</option>
+        <option id="Landes" class="Nouvelle-Aquitaine departement">Landes</option>
+        <option id="Loire" class="Auvergne-Rhône-Alpes departement">Loire</option>
+        <option id="Loire-Atlantique" class="Pays-de-la-Loire departement">Loire-Atlantique</option>
+        <option id="Loiret" class="Centre-Val-de-Loire departement">Loiret</option>
+        <option id="Loir-et-Cher" class="Centre-Val-de-Loire departement">Loir-et-Cher</option>
+        <option id="Lot" class="Occitanie departement">Lot</option>
+        <option id="Lot-et-Garonne" class="Nouvelle-Aquitaine departement">Lot-et-Garonne</option>
+        <option id="Lozère" class="Occitanie departement">Lozère</option>
+        <option id="Maine-et-Loire" class="Pays-de-la-Loire departement">Maine-et-Loire</option>
+        <option id="Manche" class="Normandie departement">Manche</option>
+        <option id="Marne" class="Grand-Est departement">Marne</option>
+        <option id="Martinique" class="Martinique departement">Martinique</option>
+        <option id="Mayenne" class="Pays-de-la-Loire departement">Mayenne</option>
+        <option id="Meurthe-et-Moselle" class="Grand-Est departement">Meurthe-et-Moselle</option>
+        <option id="Meuse" class="Grand-Est departement">Meuse</option>
+        <option id="Morbihan" class="Bretagne departement">Morbihan</option>
+        <option id="Moselle" class="Grand-Est departement">Moselle</option>
+        <option id="Nièvre" class="Bourgogne-Franche-Comté departement">Nièvre</option>
+        <option id="Nord" class="Hauts-de-France departement">Nord</option>
+        <option id="Oise" class="Hauts-de-France departement">Oise</option>
+        <option id="Orne" class="Normandie departement">Orne</option>
+        <option id="Paris" class="Île-de-France departement">Paris</option>
+        <option id="Pas-de-Calais" class="Hauts-de-France departement">Pas-de-Calais</option>
+        <option id="Puy-de-Dôme" class="Auvergne-Rhône-Alpes departement">Puy-de-Dôme</option>
+        <option id="Pyrénées-Atlantiques" class="Nouvelle-Aquitaine departement">Pyrénées-Atlantiques</option>
+        <option id="Pyrénées-Orientales" class="Occitanie departement">Pyrénées-Orientales</option>
+        <option id="La-Réunion" class="La-Réunion departement">La Réunion</option>
+        <option id="Rhône" class="Auvergne-Rhône-Alpes departement">Rhône</option>
+        <option id="Saône-et-Loire" class="Bourgogne-Franche-Comté departement">Saône-et-Loire</option>
+        <option id="Sarthe" class="Pays-de-la-Loire departement">Sarthe</option>
+        <option id="Savoie" class="Auvergne-Rhône-Alpes departement">Savoie</option>
+        <option id="Seine-et-Marne" class="Île-de-France departement">Seine-et-Marne</option>
+        <option id="Seine-Maritime" class="Normandie departement">Seine-Maritime</option>
+        <option id="Seine-Saint-Denis" class="Île-de-France departement">Seine-Saint-Denis</option>
+        <option id="Somme" class="Hauts-de-France departement">Somme</option>
+        <option id="Tarn" class="Occitanie departement">Tarn</option>
+        <option id="Tarn-et-Garonne" class="Occitanie departement">Tarn-et-Garonne</option>
+        <option id="Territoire-de-Belfort" class="Bourgogne-Franche-Comté departement">Territoire-de-Belfort</option>
+        <option id="Val-de-Marne" class="Île-de-France departement">Val-de-Marne</option>
+        <option id="Val-d'Oise" class="Île-de-France departement">Val-d'Oise</option>
+        <option id="Var" class="Provence-Alpes-Côte-d'Azur departement">Var</option>
+        <option id="Vaucluse" class="Provence-Alpes-Côte-d'Azur departement">Vaucluse</option>
+        <option id="Vendée" class="Pays-de-la-Loire departement">Vendée</option>
+        <option id="Vienne" class="Nouvelle-Aquitaine departement">Vienne</option>
+        <option id="Vosges" class="Grand-Est departement">Vosges</option>
+        <option id="Yonne" class="Bourgogne-Franche-Comté departement">Yonne</option>
+        <option id="Yvelines" class="Île-de-France departement">Yvelines</option>
 
         </select>
 
         <p>Veuillez saisir votre communauté de commune</p>
 
-        <select id="comcom" onChange="toggle_comcom(this.value)">
-            <option value="_blank">Communauté de commune</option>
         
+        <select id="comcoms" onChange="select_communes(this.value);">
+            <option value="_blank"></option>
+                <% @communes.each do |communes| %>
+            <option id="<%=communes.lib_ci%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.lib_ci%> comcoms"><%=communes.lib_ci%></option>
+                <%end%>
 
         </select>
 
         <p>Veuillez saisir votre commune</p>
-
-        <select id="communes">
-            <option id="_blank" class="Null"></option>
-            <% @communes.each do |communes| %>
-            <option id="<%=communes.nom_com%>" class="<%=communes.nom_com%> communes"><%=communes.nom_com%></option>
-            <%end%>
-        </select>
+    <select id="communes">
+        <option id="_blank" class="Null"></option>
+        <% @communes.each do |communes| %>
+            <option id="<%=communes.nom_com%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.lib_ci%> <%=communes.nom_com%> communes"><%=communes.nom_com%></option>
+        <%end%>
+    </select>
     </div>
     <div class=filtrep3>
     <div class=comparatif>

@@ -27,28 +27,29 @@ function select_departement(param){
         hide_departement();
         // affiche les selection avec la classe param 
         var departements = document.getElementsByClassName(param);
-        for (let index = 0; index < departements.length; index++) {
-            departements[index].style.display = "inline";
+        for (let i = 0; i < departements.length; i++) {
+            departements[i].style.display = "inline";
         }
     }    
 }
 // cache toutes les options du select
 function hide_departement(){
     var departements = document.getElementsByClassName("departement");
-    for (let index = 0; index < departements.length; index++) {
-        departements[index].style.display = "none";
+    for (let i = 0; i < departements.length; i++) {
+        departements[i].style.display = "none";
     }
 }
 // affiche toutes les options du select
 function showAll_departement(){
     var departements = document.getElementsByClassName("departement");
-    for (let index = 0; index < departements.length; index++) {
-        departements[index].style.display = "inline";
+    for (let i = 0; i < departements.length; i++) {
+        departements[i].style.display = "inline";
     }
 }
 
-// --------------------------------------------------------------------------------------- <option id="<%=communes.nom_com%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.nom_com%> communes"><%=communes.nom_com%></option>
+// --------------------------------------------------------------------------------------- 
 function select_communes(param) {
+
     if (param === "_blank") {
         showAll_communes();
     }else{
@@ -65,35 +66,60 @@ function select_communes(param) {
         hide_communes();
 
         var communes = document.getElementsByClassName(param);
-        for (let index = 0; index < communes.length; index++) {
-            communes[index].style.display = "inline";
+        for (let i = 0; i < communes.length; i++) {
+            communes[i].style.display = "inline";
         }
     }
 }
 
 function hide_communes() {
     var communes = document.getElementsByClassName("communes");
-    for (let index = 0; index < communes.length; index++) {
-        communes[index].style.display = "none";
+    for (let i = 0; i < communes.length; i++) {
+        communes[i].style.display = "none";
     }
 }
 
 function showAll_communes(params) {
     var communes = document.getElementsByClassName("communes");
-    for (let index = 0; index < communes.length; index++) {
-        communes[index].style.display = "inline";
+    for (let i = 0; i < communes.length; i++) {
+        communes[i].style.display = "inline";
     }
 }
 
 // ---------------------------------------------------------------------------------------
 function select_comcoms(param) {
-    
+    if (param === "_blank") {
+        showAll_comcoms();
+    }else{
+        
+        var id_comcoms_select = document.getElementById("comcoms").selectedIndex;        
+
+        var class_comcoms_select = document.getElementById('comcoms').getElementsByTagName('option')[id_comcoms_select].getAttribute("class");
+
+        if (!(class_comcoms_select.includes(param))) {
+
+            document.getElementById('comcoms').getElementsByTagName('option')[0].selected = 'selected'; 
+        }
+        
+        hide_comcoms();
+
+        var comcoms = document.getElementsByClassName(param);
+        for (let i = 0; i < comcoms.length; i++) {
+            comcoms[i].style.display = "inline";
+        }
+    }
 }
 
 function hide_comcoms() {
-    
+    var comcoms = document.getElementsByClassName("comcoms");
+    for (let i = 0; i < comcoms.length; i++) {
+        comcoms[i].style.display = "none";
+    }
 }
 
-function showAll_comcoms(params) {
-    
-}
+function showAll_comcoms() {
+    var comcoms = document.getElementsByClassName("comcoms");
+    for (let i = 0; i < comcoms.length; i++) {
+        comcoms[i].style.display = "inline";
+    }
+}   
