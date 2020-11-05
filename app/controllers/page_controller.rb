@@ -12,6 +12,7 @@ class PageController < ApplicationController
             requete += " AND insee_reg = #{params[:reg]}"
         end
         @scorescommunes = Scorecommune.where(requete).page(params[:page]).per(200)
-        @comcoms = Scorecommune.select("nom_com").group("nom_com")
+        @comcoms = Scorecommune.select("nom_comcom").group("nom_comcom")
+        @communes = Scorecommune.select("nom_com").group("nom_com")
     end
 end
