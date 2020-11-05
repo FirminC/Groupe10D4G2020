@@ -27,23 +27,23 @@ function select_departement(param){
         hide_departement();
         // affiche les selection avec la classe param 
         var departements = document.getElementsByClassName(param);
-        for (let index = 0; index < departements.length; index++) {
-            departements[index].style.display = "inline";
+        for (let i = 0; i < departements.length; i++) {
+            departements[i].style.display = "inline";
         }
     }    
 }
 // cache toutes les options du select
 function hide_departement(){
     var departements = document.getElementsByClassName("departement");
-    for (let index = 0; index < departements.length; index++) {
-        departements[index].style.display = "none";
+    for (let i = 0; i < departements.length; i++) {
+        departements[i].style.display = "none";
     }
 }
 // affiche toutes les options du select
 function showAll_departement(){
     var departements = document.getElementsByClassName("departement");
-    for (let index = 0; index < departements.length; index++) {
-        departements[index].style.display = "inline";
+    for (let i = 0; i < departements.length; i++) {
+        departements[i].style.display = "inline";
     }
 }
 
@@ -66,23 +66,23 @@ function select_communes(param) {
         hide_communes();
 
         var communes = document.getElementsByClassName(param);
-        for (let index = 0; index < communes.length; index++) {
-            communes[index].style.display = "inline";
+        for (let i = 0; i < communes.length; i++) {
+            communes[i].style.display = "inline";
         }
     }
 }
 
 function hide_communes() {
     var communes = document.getElementsByClassName("communes");
-    for (let index = 0; index < communes.length; index++) {
-        communes[index].style.display = "none";
+    for (let i = 0; i < communes.length; i++) {
+        communes[i].style.display = "none";
     }
 }
 
 function showAll_communes(params) {
     var communes = document.getElementsByClassName("communes");
-    for (let index = 0; index < communes.length; index++) {
-        communes[index].style.display = "inline";
+    for (let i = 0; i < communes.length; i++) {
+        communes[i].style.display = "inline";
     }
 }
 
