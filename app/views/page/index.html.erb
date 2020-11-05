@@ -5,7 +5,7 @@
     </select>
 
     <select id="region" onChange="select_departement(this.value); select_comcoms(this.value); select_communes(this.value)">
-        <option value="_blank"></option>
+        <option value="_blank">Région</option>
         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
         <option value="Bretagne">Bretagne</option>
@@ -134,9 +134,9 @@
     </select>
 
     <select id="communes">
-        <option id="_blank" class="Null"></option>
+        <option id="_blank" class="Null">Commune</option>
         <% @communes.each do |communes| %>
-            <option id="<%=communes.nom_com%>" class="<%=communes.nom_com%> communes"><%=communes.nom_com%></option>
+            <option id=" <%=communes.nom_com%> communes"><%=communes.nom_com%></option>
         <%end%>
     </select>
 
