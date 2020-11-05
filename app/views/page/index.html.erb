@@ -24,7 +24,7 @@
 
     </select>
 
-    <select id="departement">
+    <select id="departement" onChange="select_comcoms(this.value); select_communes(this.value)">
         <option id="_blank" class="Null"></option>
         <option id="Ain" class="Auvergne-Rhône-Alpes departement">Ain</option>
         <option id="Aisne" class="Hauts-de-France departement">Aisne</option>
@@ -129,7 +129,9 @@
 
     <select id="comcom">
         <option value="_blank"></option>
-        
+        <% @communes.each do |communes| %>
+            <option id="<%=communes.nom_com%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.nom_com%> communes"><%=communes.nom_com%></option>
+        <%end%>
 
     </select>
 
