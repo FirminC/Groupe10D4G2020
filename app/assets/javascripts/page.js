@@ -1,5 +1,5 @@
 // s'active dès lors que l'option du select de region est modifié 
-function toggle_departement(param){
+function select_departement(param){
 
     if (param === "_blank") {
 
