@@ -1,5 +1,11 @@
+<div class=filtre>   
+    <select id="cp" onChange="toggle_codePostal(this.value)">
+        <option value="_blank">Code Postale</option>
+
+    </select>
+
     <select id="region" onChange="toggle_departement(this.value)">
-        <option value="_blank"></option>
+        <option value="_blank">Région</option>
         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
         <option value="Bretagne">Bretagne</option>
@@ -22,7 +28,7 @@
     </select>
 
     <select id="departement">
-        <option id="_blank" class="Null"></option>
+        <option id="_blank" class="Null">Département</option>
         <option id="Ain" class="Auvergne-Rhône-Alpes departement">Ain</option>
         <option id="Aisne" class="Hauts-de-France departement">Aisne</option>
         <option id="Allier" class="Auvergne-Rhône-Alpes departement">Allier</option>
@@ -126,6 +132,23 @@
         <option id="Yvelines" class="Île-de-France departement">Yvelines</option>
 
     </select>
+
+    <select id="comcom" onChange="toggle_comcom(this.value)">
+        <option value="_blank">Communauté de commune</option>
+        
+
+    </select>
+
+    <select id="commune" onChange="toggle_commune(this.value)">
+        <option value="_blank">Commune</option>
+        
+
+    </select>
+
+    <%= image_tag  "mednum.jpg", onload:"checkcookie()" %>
+    <%= image_tag  "agence.jpg", onload:"checkcookie()" %>
+
+</div>
 
     <%= paginate @scorescommunes %>
 
