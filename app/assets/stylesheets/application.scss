@@ -13,33 +13,90 @@
 *= require_tree .
 *= require_self
 */
+@font-face{
+    font-family: 'Montserrat';
+    src:font-url('Montserrat-Regular.ttf')format('truetype');
+}
+
+*
+{
+    font-family: Montserrat;
+}
 
 .header
 {
     width: 100%;
+    position:fixed;
+    background-color:#fbfdfc;
+    top:0;
     font-size: xx-large;
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index:1000;
+    border-width: 0.8cm;
+    border-color:#0a3e65;
+    border-bottom:solid;
 
     .flexheaderc
     {
-        display: inline-block;
+        display:inline-block;
     }
 
-    p
+    img
     {
-        display: inline-block;
+        padding: 0;
+        margin: 0;
+        height: 12vh;
+    }
+
+    a
+    {
+        color:#0a3e65;
+        text-decoration: none;
     }
 }
 
 body
 {
-    margin: 0;
+    margin:0;
+    padding-top:14vh;
 
     .maindiv
     {
-        margin: 8px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+	    font-size: small;
+        color: black;
+        font-weight:small; 
+    }
+
+    footer
+    {
+        padding: 0;
+        margin:0;
+        background-color: #0a3e65;
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        p
+        {
+            font-size: 0.75vh;
+            font-size: 0.75vw;
+            color: white;
+            font-weight:normal;
+            width: 100%;
+
+            a
+            {
+                color:white;
+                text-decoration: none;
+            }
+        }
     }
 }
 
