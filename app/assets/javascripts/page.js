@@ -47,23 +47,27 @@ function showAll_departement(){
     }
 }
 
-function select_comcoms(param) {
-    
-}
-
-function hide_comcoms() {
-    
-}
-
-function showAll_comcoms(params) {
-    
-}
-
+// --------------------------------------------------------------------------------------- <option id="<%=communes.nom_com%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.nom_com%> communes"><%=communes.nom_com%></option>
 function select_communes(param) {
     if (param === "_blank") {
         showAll_communes();
     }else{
         
+        var id_communes_select = document.getElementById("communes").selectedIndex;        
+
+        var class_communes_select = document.getElementById('communes').getElementsByTagName('option')[id_communes_select].getAttribute("class");
+
+        if (!(class_communes_select.includes(param))) {
+
+            document.getElementById('communes').getElementsByTagName('option')[0].selected = 'selected'; 
+        }
+        
+        hide_communes();
+
+        var communes = document.getElementsByClassName(param);
+        for (let index = 0; index < communes.length; index++) {
+            communes[index].style.display = "inline";
+        }
     }
 }
 
@@ -79,4 +83,17 @@ function showAll_communes(params) {
     for (let index = 0; index < communes.length; index++) {
         communes[index].style.display = "inline";
     }
+}
+
+// ---------------------------------------------------------------------------------------
+function select_comcoms(param) {
+    
+}
+
+function hide_comcoms() {
+    
+}
+
+function showAll_comcoms(params) {
+    
 }
