@@ -1,9 +1,14 @@
-<div class=filtre>   
+<div class=filtre> 
+    <h1>Recherche de votre Commune</h1>
+    <div class=filtrep1> 
+        <p> Veuillez saisir votre code postale</p>
+        <input id="cp">
+    </div>
+    <div class=filtrep2>
+        <p>OU</p>
+        <p>Veuillez saisir votre région</p>
 
-    <input id="cp">
-
-
-    <select id="region" onChange="select_communes(this.value); select_comcoms(this.value); select_departement(this.value);">
+         <select id="region" onChange="select_communes(this.value); select_comcoms(this.value); select_departement(this.value);">
         <option value="_blank"></option>
         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
@@ -20,8 +25,9 @@
         <option value="Occitanie">Occitanie</option>
         <option value="Pays-de-la-Loire">Pays de la Loire</option>
         <option value="Provence-Alpes-Côte-d'Azur">Provence-Alpes-Côte d'Azur</option>
-
     </select>
+
+        <p>Veuillez saisir votre département</p>
 
     <select id="departement" onChange="select_communes(this.value); select_comcoms(this.value);">
         <option id="_blank" class="Null"></option>
@@ -124,32 +130,44 @@
         <option id="Yonne" class="Bourgogne-Franche-Comté departement">Yonne</option>
         <option id="Yvelines" class="Île-de-France departement">Yvelines</option>
 
-    </select>
+        </select>
 
-    <select id="comcoms" onChange="select_communes(this.value);">
-        <option value="_blank"></option>
-        <% @communes.each do |communes| %>
+        <p>Veuillez saisir votre communauté de commune</p>
+
+        
+        <select id="comcoms" onChange="select_communes(this.value);">
+            <option value="_blank"></option>
+                <% @communes.each do |communes| %>
             <option id="<%=communes.lib_ci%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.lib_ci%> comcoms"><%=communes.lib_ci%></option>
-        <%end%>
+                <%end%>
 
-    </select>
+        </select>
 
+        <p>Veuillez saisir votre commune</p>
     <select id="communes">
         <option id="_blank" class="Null"></option>
         <% @communes.each do |communes| %>
             <option id="<%=communes.nom_com%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.lib_ci%> <%=communes.nom_com%> communes"><%=communes.nom_com%></option>
         <%end%>
     </select>
+    </div>
+    <div class=filtrep3>
+    <div class=comparatif>
+        <p>Liste épinglés</p>
+        <table>
+            <tr>
+                <th>Nom de la commune</th>
+            </tr>
+        </table>
+        <input type="button" onclick='resultat()' value="Voir les résultats" class='submit'>
+    </div>
 
-    
-    <%= image_tag  "mednum.jpg", onload:"checkcookie()" %>
-    <%= image_tag  "agence.jpg", onload:"checkcookie()" %>
-
+    </div>
 </div>
 
     <%= paginate @scorescommunes %>
 
-    <table>
+    <table class=bdd>
         <tr>
             <th>Nom de la commune</th>
             <th>Code Iris</th>
