@@ -10,6 +10,21 @@
     margin: auto;
 }
 
+table
+{
+    text-align: center;
+
+    tr:nth-child(even)
+    {
+        background-color: lightgray;
+    }
+    
+    .com
+    {
+        text-align: left;
+    }
+}
+
 .filtre
 {
     margin: 0 auto;
