@@ -4,7 +4,7 @@
 
     </select>
 
-    <select id="region" onChange="select_departement(this.value); select_comcoms(this.value); select_communes(this.value);">
+    <select id="region" onChange="select_communes(this.value); select_comcoms(this.value); select_departement(this.value);">
         <option value="_blank"></option>
         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
@@ -24,7 +24,7 @@
 
     </select>
 
-    <select id="departement" onChange="select_comcoms(this.value); select_communes(this.value);">
+    <select id="departement" onChange="select_communes(this.value); select_comcoms(this.value);">
         <option id="_blank" class="Null"></option>
         <option id="Ain" class="Auvergne-Rhône-Alpes departement">Ain</option>
         <option id="Aisne" class="Hauts-de-France departement">Aisne</option>
@@ -127,10 +127,10 @@
 
     </select>
 
-    <select id="comcom" onChange="select_communes(this.value);">
+    <select id="comcoms" onChange="select_communes(this.value);">
         <option value="_blank"></option>
         <% @communes.each do |communes| %>
-            <option id="<%=communes.nom_com%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.lib_ci%> comcoms"><%=communes.nom_com%></option>
+            <option id="<%=communes.lib_ci%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.lib_ci%> comcoms"><%=communes.lib_ci%></option>
         <%end%>
 
     </select>

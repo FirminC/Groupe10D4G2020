@@ -57,7 +57,7 @@ function select_communes(param) {
         var id_communes_select = document.getElementById("communes").selectedIndex;        
 
         var class_communes_select = document.getElementById('communes').getElementsByTagName('option')[id_communes_select].getAttribute("class");
-        alert(class_communes_select);
+
         if (!(class_communes_select.includes(param))) {
 
             document.getElementById('communes').getElementsByTagName('option')[0].selected = 'selected'; 
@@ -88,13 +88,38 @@ function showAll_communes(params) {
 
 // ---------------------------------------------------------------------------------------
 function select_comcoms(param) {
-    
+    if (param === "_blank") {
+        showAll_comcoms();
+    }else{
+        
+        var id_comcoms_select = document.getElementById("comcoms").selectedIndex;        
+
+        var class_comcoms_select = document.getElementById('comcoms').getElementsByTagName('option')[id_comcoms_select].getAttribute("class");
+
+        if (!(class_comcoms_select.includes(param))) {
+
+            document.getElementById('comcoms').getElementsByTagName('option')[0].selected = 'selected'; 
+        }
+        
+        hide_comcoms();
+
+        var comcoms = document.getElementsByClassName(param);
+        for (let i = 0; i < comcoms.length; i++) {
+            comcoms[i].style.display = "inline";
+        }
+    }
 }
 
 function hide_comcoms() {
-    
+    var comcoms = document.getElementsByClassName("comcoms");
+    for (let i = 0; i < comcoms.length; i++) {
+        comcoms[i].style.display = "none";
+    }
 }
 
 function showAll_comcoms() {
-  
-}
+    var comcoms = document.getElementsByClassName("comcoms");
+    for (let i = 0; i < comcoms.length; i++) {
+        comcoms[i].style.display = "inline";
+    }
+}   
