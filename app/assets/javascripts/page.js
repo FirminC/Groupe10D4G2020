@@ -75,9 +75,13 @@ function showall(){
 }
 
 function show1(){
-    document.getElementById("Auvergne-Rhône-Alpes").style.display ="inline";
-    
+
     hide();
+
+    
+    
+
+    
     document.getElementById("Ain").style.display ="inline";
     document.getElementById("Allier").style.display ="inline";
     document.getElementById("Ardêche").style.display ="inline";
@@ -112,12 +116,13 @@ function show2(){
 
 function show3(){
     document.getElementById("Bretagne").style.display ="inline";
-
+    
     hide();
+    
     document.getElementById("Côtes d'Armor").style.display ="inline";
     document.getElementById("Finistère").style.display ="inline";
     document.getElementById("Île-et-Vilaine").style.display ="inline";
-    document.getElementById("Morbihan").style.display ="inline";   
+    document.getElementById("Morbihan").style.display ="inline";
 
 }
 
