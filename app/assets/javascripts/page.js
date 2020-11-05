@@ -1,10 +1,10 @@
 // s'active dès lors que l'option du select de region est modifié 
-function toggle_departement(param){
+function select_departement(param){
 
     if (param === "_blank") {
 
         // si la selection de la région est sur _blank alors on affiche la liste de tout les departements
-        showall();
+        showAll_departement();
     }else{
     
         // sinon si on clique sur une région différentes (modification du select)
@@ -24,7 +24,7 @@ function toggle_departement(param){
         }
         
         // cache toutes les options du select
-        hide();
+        hide_departement();
         // affiche les selection avec la classe param 
         var departements = document.getElementsByClassName(param);
         for (let index = 0; index < departements.length; index++) {
@@ -33,16 +33,67 @@ function toggle_departement(param){
     }    
 }
 // cache toutes les options du select
-function hide(){
+function hide_departement(){
     var departements = document.getElementsByClassName("departement");
     for (let index = 0; index < departements.length; index++) {
         departements[index].style.display = "none";
     }
 }
 // affiche toutes les options du select
-function showall(){
+function showAll_departement(){
     var departements = document.getElementsByClassName("departement");
     for (let index = 0; index < departements.length; index++) {
         departements[index].style.display = "inline";
     }
+}
+
+// --------------------------------------------------------------------------------------- <option id="<%=communes.nom_com%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.nom_com%> communes"><%=communes.nom_com%></option>
+function select_communes(param) {
+    if (param === "_blank") {
+        showAll_communes();
+    }else{
+        
+        var id_communes_select = document.getElementById("communes").selectedIndex;        
+
+        var class_communes_select = document.getElementById('communes').getElementsByTagName('option')[id_communes_select].getAttribute("class");
+
+        if (!(class_communes_select.includes(param))) {
+
+            document.getElementById('communes').getElementsByTagName('option')[0].selected = 'selected'; 
+        }
+        
+        hide_communes();
+
+        var communes = document.getElementsByClassName(param);
+        for (let index = 0; index < communes.length; index++) {
+            communes[index].style.display = "inline";
+        }
+    }
+}
+
+function hide_communes() {
+    var communes = document.getElementsByClassName("communes");
+    for (let index = 0; index < communes.length; index++) {
+        communes[index].style.display = "none";
+    }
+}
+
+function showAll_communes(params) {
+    var communes = document.getElementsByClassName("communes");
+    for (let index = 0; index < communes.length; index++) {
+        communes[index].style.display = "inline";
+    }
+}
+
+// ---------------------------------------------------------------------------------------
+function select_comcoms(param) {
+    
+}
+
+function hide_comcoms() {
+    
+}
+
+function showAll_comcoms(params) {
+    
 }

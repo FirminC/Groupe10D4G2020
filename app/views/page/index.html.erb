@@ -4,26 +4,23 @@
 
     </select>
 
-    <select id="region" onChange="toggle_departement(this.value)">
-        <option value="_blank">Région</option>
+    <select id="region" onChange="select_departement(this.value); select_comcoms(this.value); select_communes(this.value)">
+        <option value="_blank"></option>
         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
         <option value="Bretagne">Bretagne</option>
         <option value="Centre-Val-de-Loire">Centre-Val de Loire</option>
+        <option value="Corse">Corse</option>
         <option value="Grand-Est">Grand Est</option>
-        <option value="Guadeloupe">Guadeloupe</option>
-        <option value="Guyane">Guyane</option>
         <option value="Hauts-de-France">Hauts-de-France</option>
         <option value="Île-de-France">Île-de-France</option>
-        <option value="La-Corse">La Corse</option>
+        <option value="La-Réunion">La Réunion</option>
         <option value="Martinique">Martinique</option>
-        <option value="Mayotte">Mayotte</option>
         <option value="Normandie">Normandie</option>
         <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
         <option value="Occitanie">Occitanie</option>
         <option value="Pays-de-la-Loire">Pays de la Loire</option>
         <option value="Provence-Alpes-Côte-d'Azur">Provence-Alpes-Côte d'Azur</option>
-        <option value="Réunion">Réunion</option>
 
     </select>
 
@@ -32,7 +29,7 @@
         <option id="Ain" class="Auvergne-Rhône-Alpes departement">Ain</option>
         <option id="Aisne" class="Hauts-de-France departement">Aisne</option>
         <option id="Allier" class="Auvergne-Rhône-Alpes departement">Allier</option>
-        <option id="Alpes de Haute-Provence" class="Provence-Alpes-Côte-d'Azur departement">Alpes de Haute-Provence</option>
+        <option id="Alpes-de-Haute-Provence" class="Provence-Alpes-Côte-d'Azur departement">Alpes de Haute-Provence</option>
         <option id="Alpes-Maritimes" class="Provence-Alpes-Côte-d'Azur departement">Alpes-Maritimes</option>
         <option id="Ardêche" class="Auvergne-Rhône-Alpes departement">Ardêche</option>
         <option id="Ardennes" class="Grand-Est departement">Ardennes</option>
@@ -48,9 +45,9 @@
         <option id="Charente-Maritime" class="Nouvelle-Aquitaine departement">Charente-Maritime</option>
         <option id="Cher" class="Centre-Val-de-Loire departement">Cher</option>
         <option id="Corrèze" class="Nouvelle-Aquitaine departement">Corrèze</option>
-        <option id="Corse-du-Sud" class="La-Corse departement">Corse-du-Sud</option>
+        <option id="Corse-du-Sud" class="Corse departement">Corse-du-Sud</option>
         <option id="Côte-d'Or" class="Bourgogne-Franche-Comté departement">Côte-d'Or</option>
-        <option id="Côtes d'Armor" class="Bretagne departement">Côtes d'Armor</option>
+        <option id="Côtes-d'Armor" class="Bretagne departement">Côtes d'Armor</option>
         <option id="Creuse" class="Nouvelle-Aquitaine departement">Creuse</option>
         <option id="Deux-Sèvres" class="Nouvelle-Aquitaine departement">Deux-Sèvres</option>
         <option id="Dordogne" class="Nouvelle-Aquitaine departement">Dordogne</option>
@@ -63,9 +60,7 @@
         <option id="Gard" class="Occitanie departement">Gard</option>
         <option id="Gers" class="Occitanie departement">Gers</option>
         <option id="Gironde" class="Nouvelle-Aquitaine departement">Gironde</option>
-        <option id="Guadeloupe" class="Guadeloupe departement">Guadeloupe</option>
-        <option id="Guyane" class="Guyane departement">Guyane</option>
-        <option id="Haute-Corse" class="La-Corse departement">Haute-Corse</option>
+        <option id="Haute-Corse" class="Corse departement">Haute-Corse</option>
         <option id="Haute-Garonne" class="Occitanie departement">Haute-Garonne</option>
         <option id="Haute-Loire" class="Auvergne-Rhône-Alpes departement">Haute-Loire</option>
         <option id="Haute-Marne" class="Grand-Est departement">Haute-Marne</option>
@@ -77,7 +72,7 @@
         <option id="Haut-Rhin" class="Grand-Est departement">Haut-Rhin</option>
         <option id="Hauts-de-Seine" class="Île-de-France departement">Hauts-de-Seine</option>
         <option id="Hérault" class="Occitanie departement">Hérault</option>
-        <option id="Île-et-Vilaine" class="Bretagne departement">Île-et-Vilaine</option>
+        <option id="Ille-et-Vilaine" class="Bretagne departement">Ille-et-Vilaine</option>
         <option id="Indre" class="Centre-Val-de-Loire departement">Indre</option>
         <option id="Indre-et-Loire" class="Centre-Val-de-Loire departement">Indre-et-Loire</option>
         <option id="Isère" class="Auvergne-Rhône-Alpes departement">Isère</option>
@@ -95,7 +90,6 @@
         <option id="Marne" class="Grand-Est departement">Marne</option>
         <option id="Martinique" class="Martinique departement">Martinique</option>
         <option id="Mayenne" class="Pays-de-la-Loire departement">Mayenne</option>
-        <option id="Mayotte" class="Mayotte departement">Mayotte</option>
         <option id="Meurthe-et-Moselle" class="Grand-Est departement">Meurthe-et-Moselle</option>
         <option id="Meuse" class="Grand-Est departement">Meuse</option>
         <option id="Morbihan" class="Bretagne departement">Morbihan</option>
@@ -109,7 +103,7 @@
         <option id="Puy-de-Dôme" class="Auvergne-Rhône-Alpes departement">Puy-de-Dôme</option>
         <option id="Pyrénées-Atlantiques" class="Nouvelle-Aquitaine departement">Pyrénées-Atlantiques</option>
         <option id="Pyrénées-Orientales" class="Occitanie departement">Pyrénées-Orientales</option>
-        <option id="Réunion" class="Réunion departement">Réunion</option>
+        <option id="La-Réunion" class="La-Réunion departement">La Réunion</option>
         <option id="Rhône" class="Auvergne-Rhône-Alpes departement">Rhône</option>
         <option id="Saône-et-Loire" class="Bourgogne-Franche-Comté departement">Saône-et-Loire</option>
         <option id="Sarthe" class="Pays-de-la-Loire departement">Sarthe</option>
@@ -139,12 +133,14 @@
 
     </select>
 
-    <select id="commune" onChange="toggle_commune(this.value)">
-        <option value="_blank">Commune</option>
-        
-
+    <select id="communes">
+        <option id="_blank" class="Null"></option>
+        <% @communes.each do |communes| %>
+            <option id="<%=communes.nom_com%>" class="<%=communes.nom_com%> communes"><%=communes.nom_com%></option>
+        <%end%>
     </select>
 
+    
     <%= image_tag  "mednum.jpg", onload:"checkcookie()" %>
     <%= image_tag  "agence.jpg", onload:"checkcookie()" %>
 
@@ -152,39 +148,39 @@
 
     <%= paginate @scorescommunes %>
 
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Nom de la commune</th>
-        <th>Code de commune</th>
-        <th>Code de département</th>
-        <th>Nom du département</th>
-        <th>Code de la région</th>
-        <th>Population légale</th>
-        <th>Accès interface numérique</th>
-        <th>Accès information</th>
-        <th>Score global accès</th>
-        <th>Compétences administrative</th>
-        <th>Compétences numériques et scolaire</th>
-        <th>Score global compétences</th>
-        <th>Score global</th>
-    </tr>
-    <% @scorescommunes.each do |commune| %>
+    <table>
         <tr>
-            <td><%=commune.id%></td>
-            <td><%=commune.nom_com%></td>
-            <td><%=commune.insee_com%></td>
-            <td><%=commune.insee_dep%></td>
-            <td><%=commune.nom_dep%></td>
-            <td><%=commune.insee_reg%></td>
-            <td><%=commune.poplegal%></td>
-            <td><%=commune.accintnum%></td>
-            <td><%=commune.accinf%></td>
-            <td><%=commune.global_acces%></td>
-            <td><%=commune.comp_admin%></td>
-            <td><%=commune.comp_numsco%></td>
-            <td><%=commune.global_comp%></td>
-            <td><%=commune.score_global%></td>
+            <th>Id</th>
+            <th>Nom de la commune</th>
+            <th>Code de commune</th>
+            <th>Code de département</th>
+            <th>Nom du département</th>
+            <th>Code de la région</th>
+            <th>Population légale</th>
+            <th>Accès interface numérique</th>
+            <th>Accès information</th>
+            <th>Score global accès</th>
+            <th>Compétences administrative</th>
+            <th>Compétences numériques et scolaire</th>
+            <th>Score global compétences</th>
+            <th>Score global</th>
         </tr>
-    <%end%>
-</table>
+        <% @scorescommunes.each do |commune| %>
+            <tr>
+                <td><%=commune.id%></td>
+                <td><%=commune.nom_com%></td>
+                <td><%=commune.insee_com%></td>
+                <td><%=commune.insee_dep%></td>
+                <td><%=commune.nom_dep%></td>
+                <td><%=commune.insee_reg%></td>
+                <td><%=commune.poplegal%></td>
+                <td><%=commune.accintnum%></td>
+                <td><%=commune.accinf%></td>
+                <td><%=commune.global_acces%></td>
+                <td><%=commune.comp_admin%></td>
+                <td><%=commune.comp_numsco%></td>
+                <td><%=commune.global_comp%></td>
+                <td><%=commune.score_global%></td>
+            </tr>
+        <%end%>
+    </table>
