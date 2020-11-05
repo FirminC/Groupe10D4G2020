@@ -122,4 +122,40 @@ function showAll_comcoms() {
     for (let i = 0; i < comcoms.length; i++) {
         comcoms[i].style.display = "inline";
     }
-}   
+}
+
+//Conversion PDF
+
+    function generate() {
+	var doc = new jsPDF('p', 'pt', 'letter');
+	var htmlstring = '';
+	var tempVarToCheckPageHeight = 0;
+	var pageHeight = 0;
+	pageHeight = doc.internal.pageSize.height;
+	specialElementHandlers = {
+        // element with id of "bypass" - jQuery style selector
+        '#bypassme': function(element, renderer) {
+			// true = "handled elsewhere, bypass text extraction"
+			return true
+		}
+	};
+	margins = {
+        top: 150,
+		bottom: 60,
+		left: 40,
+		right: 40,
+		width: 600
+	};
+	var y = 20;
+	doc.setLineWidth(2);
+	doc.text(220, y = y + 30, "INDICE DE FRAGILITE");
+	doc.autoTable({
+        html: '#table',
+		startY: 60,
+		styles: {
+        fontSize: 8.2,
+			cellWidth: 'wrap'
+		},
+	})
+	doc.save('Indice_de_fragilite.pdf');
+}

@@ -1,3 +1,6 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
+
 <div class=filtre> 
     <h1>Recherche de votre Commune</h1>
     <div class=filtrep1> 
@@ -167,7 +170,7 @@
 
     <%= paginate @scorescommunes %>
 
-    <table class=bdd>
+    <table class=bdd id=table>
         <tr>
             <th>Nom de la commune</th>
             <th>Code Iris</th>
@@ -198,6 +201,8 @@
                 <td><%=commune.comp_numsco%></td>
                 <td><%=commune.global_acces%></td>
                 <td><%=commune.global_comp%></td>
+                <td><input type ="button" class="<%=commune.code_iris%>" onclick="pin(this)"></td>
             </tr>
         <%end%>
     </table>
+<input type="button" onclick="generate()" value="Export To PDF" />
