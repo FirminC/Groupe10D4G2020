@@ -2,20 +2,20 @@ function toggle_departement(param){
     document.getElementById("Auvergne-Rhône-Alpes").style.display ="none";
     document.getElementById("Bourgogne-Franche-Comté").style.display ="none";
     document.getElementById("Bretagne").style.display ="none";
-    document.getElementById("Centre-Val de Loire").style.display ="none";
-    document.getElementById("Grand Est").style.display ="none";
+    document.getElementById("Centre-Val-de-Loire").style.display ="none";
+    document.getElementById("Grand-Est").style.display ="none";
     document.getElementById("Guadeloupe").style.display ="none";
     document.getElementById("Guyane").style.display ="none";
     document.getElementById("Hauts-de-France").style.display ="none";
     document.getElementById("Île-de-France").style.display ="none";
-    document.getElementById("La Corse").style.display ="none";
+    document.getElementById("La-Corse").style.display ="none";
     document.getElementById("Martinique").style.display ="none";
     document.getElementById("Mayotte").style.display ="none";
     document.getElementById("Normandie").style.display ="none";
     document.getElementById("Nouvelle-Aquitaine").style.display ="none";
     document.getElementById("Occitanie").style.display ="none";
-    document.getElementById("Pays de la Loire").style.display ="none";
-    document.getElementById("Provence-Alpes-Côte d'Azur").style.display ="none";
+    document.getElementById("Pays-de-la-Loire").style.display ="none";
+    document.getElementById("Provence-Alpes-Côte-d'Azur").style.display ="none";
     document.getElementById("Réunion").style.display ="none";
 
     switch (param){
@@ -25,9 +25,9 @@ function toggle_departement(param){
                                                 break;
         case "Bretagne" :                       show3();
                                                 break;
-        case "Centre-Val de Loire" :            show4();
+        case "Centre-Val-de-Loire" :            show4();
                                                 break;
-        case "Grand Est" :                      show5();
+        case "Grand-Est" :                      show5();
                                                 break;
         case "Guadeloupe" :                     show6();
                                                 break;
@@ -37,7 +37,7 @@ function toggle_departement(param){
                                                 break;
         case "Île-de-France" :                  show9();
                                                 break;
-        case "La Corse" :                       show10();
+        case "La-Corse" :                       show10();
                                                 break;
         case "Martinique" :                     show11();
                                                 break;
@@ -49,119 +49,29 @@ function toggle_departement(param){
                                                 break;
         case "Occitanie" :                      show15();
                                                 break;
-        case "Pays de la Loire" :               show16();
+        case "Pays-de-la-Loire" :               show16();
                                                 break;
-        case "Provence-Alpes-Côte d'Azur" :     show17();
+        case "Provence-Alpes-Côte-d'Azur" :     show17();
                                                 break;
         case "Réunion" :                        show18();
                                                 break;
-
+        default:                                showall();
+                                                break;
     }
 }
 
 function hide(){
-    document.getElementById("Ain").style.display ="none";
-    document.getElementById("Allier").style.display ="none";
-    document.getElementById("Ardêche").style.display ="none";
-    document.getElementById("Cantal").style.display ="none";
-    document.getElementById("Drôme").style.display ="none";
-    document.getElementById("Haute-Loire").style.display ="none";
-    document.getElementById("Haute-Savoie").style.display ="none";
-    document.getElementById("Isère").style.display ="none";
-    document.getElementById("Loire").style.display ="none";
-    document.getElementById("Puy-de-Dôme").style.display ="none";
-    document.getElementById("Rhône").style.display ="none";
-    document.getElementById("Savoie").style.display ="none";
-    document.getElementById("Côte-d'Or").style.display ="none";
-    document.getElementById("Doubs").style.display ="none";
-    document.getElementById("Haute-Saône").style.display ="none";
-    document.getElementById("Jura").style.display ="none";
-    document.getElementById("Nièvre").style.display ="none";
-    document.getElementById("Saône-et-Loire").style.display ="none";
-    document.getElementById("Territoire-de-Belfort").style.display ="none";
-    document.getElementById("Yonne").style.display ="none";
-    document.getElementById("Côtes d'Armor").style.display ="none";
-    document.getElementById("Finistère").style.display ="none";
-    document.getElementById("Île-et-Vilaine").style.display ="none";
-    document.getElementById("Morbihan").style.display ="none";
-    document.getElementById("Cher").style.display ="none";
-    document.getElementById("Eure-et-Loir").style.display ="none";
-    document.getElementById("Indre").style.display ="none";
-    document.getElementById("Indre-et-Loire").style.display ="none";
-    document.getElementById("Loiret").style.display ="none";
-    document.getElementById("Loir-et-Cher").style.display ="none";
-    document.getElementById("Ardennes").style.display ="none";
-    document.getElementById("Aube").style.display ="none";
-    document.getElementById("Bas-Rhin").style.display ="none";
-    document.getElementById("Haute-Marne").style.display ="none";
-    document.getElementById("Haut-Rhin").style.display ="none";
-    document.getElementById("Marne").style.display ="none";
-    document.getElementById("Meurthe-et-Moselle").style.display ="none";
-    document.getElementById("Meuse").style.display ="none";
-    document.getElementById("Moselle").style.display ="none";
-    document.getElementById("Vosges").style.display ="none";
-    document.getElementById("Guadeloupe").style.display ="none";
-    document.getElementById("Guyane").style.display ="none";
-    document.getElementById("Aisne").style.display ="none";
-    document.getElementById("Nord").style.display ="none";
-    document.getElementById("Oise").style.display ="none";
-    document.getElementById("Pas-de-Calais").style.display ="none";
-    document.getElementById("Somme").style.display ="none";
-    document.getElementById("Essonne").style.display ="none";
-    document.getElementById("Hauts-de-Seine").style.display ="none";
-    document.getElementById("Paris").style.display ="none";
-    document.getElementById("Seine-et-Marne").style.display ="none";
-    document.getElementById("Seine-Saint-Denis").style.display ="none";
-    document.getElementById("Val-de-Marne").style.display ="none";
-    document.getElementById("Val-d'Oise").style.display ="none";
-    document.getElementById("Yvelines").style.display ="none";
-    document.getElementById("Corse-du-Sud").style.display ="none";
-    document.getElementById("Haute-Corse").style.display ="none";
-    document.getElementById("Martinique").style.display ="none";
-    document.getElementById("Mayotte").style.display ="none";
-    document.getElementById("Calvados").style.display ="none";
-    document.getElementById("Eure").style.display ="none";
-    document.getElementById("Manche").style.display ="none";
-    document.getElementById("Orne").style.display ="none";
-    document.getElementById("Seine-Maritime").style.display ="none";
-    document.getElementById("Charente").style.display ="none";
-    document.getElementById("Charente-Maritime").style.display ="none";
-    document.getElementById("Corrèze").style.display ="none";
-    document.getElementById("Creuse").style.display ="none";
-    document.getElementById("Deux-Sèvres").style.display ="none";
-    document.getElementById("Dordogne").style.display ="none";
-    document.getElementById("Gironde").style.display ="none";
-    document.getElementById("Haute-Vienne").style.display ="none";
-    document.getElementById("Landes").style.display ="none";
-    document.getElementById("Lot-et-Garonne").style.display ="none";
-    document.getElementById("Pyrénées-Atlantiques").style.display ="none";
-    document.getElementById("Vienne").style.display ="none";
-    document.getElementById("Ariège").style.display ="none";
-    document.getElementById("Aude").style.display ="none";
-    document.getElementById("Aveyron").style.display ="none";
-    document.getElementById("Gard").style.display ="none";
-    document.getElementById("Gers").style.display ="none";
-    document.getElementById("Haute-Garonne").style.display ="none";
-    document.getElementById("Hautes-Pyrénées").style.display ="none";
-    document.getElementById("Hérault").style.display ="none";
-    document.getElementById("Lot").style.display ="none";
-    document.getElementById("Lozère").style.display ="none";
-    document.getElementById("Pyrénées-Orientales").style.display ="none";
-    document.getElementById("Tarn").style.display ="none";
-    document.getElementById("Tarn-et-Garonne").style.display ="none";
-    document.getElementById("Loire-Atlantique").style.display ="none";
-    document.getElementById("Maine-et-Loire").style.display ="none";
-    document.getElementById("Mayenne").style.display ="none";
-    document.getElementById("Sarthe").style.display ="none";
-    document.getElementById("Vendée").style.display ="none";
-    document.getElementById("Alpes de Haute-Provence").style.display ="none";
-    document.getElementById("Alpes-Maritimes").style.display ="none";
-    document.getElementById("Bouches-du-Rhône").style.display ="none";
-    document.getElementById("Hautes-Alpes").style.display ="none";
-    document.getElementById("Var").style.display ="none";
-    document.getElementById("Vaucluse").style.display ="none";
-    document.getElementById("Réunion").style.display ="none";
+    var departements = document.getElementsByClassName("departement");
+    for (let index = 0; index < departements.length; index++) {
+        departements[index].style.display = "none";
+    }
+}
 
+function showall(){
+    var departements = document.getElementsByClassName("departement");
+    for (let index = 0; index < departements.length; index++) {
+        departements[index].style.display = "inline";
+    }
 }
 
 function show1(){
@@ -212,7 +122,7 @@ function show3(){
 }
 
 function show4(){
-    document.getElementById("Centre-Val de Loire").style.display ="inline";
+    document.getElementById("Centre-Val-de-Loire").style.display ="inline";
 
     hide();
     document.getElementById("Cher").style.display ="inline";
@@ -226,7 +136,7 @@ function show4(){
 }
 
 function show5(){
-    document.getElementById("Grand Est").style.display ="inline";
+    document.getElementById("Grand-Est").style.display ="inline";
 
     hide();
     document.getElementById("Ardennes").style.display ="inline";
@@ -287,7 +197,7 @@ function show9(){
 }
 
 function show10(){
-    document.getElementById("La Corse").style.display ="inline";
+    document.getElementById("La-Corse").style.display ="inline";
 
     hide();
     document.getElementById("Corse-du-Sud").style.display ="inline";
@@ -363,7 +273,7 @@ function show15(){
 }
 
 function show16(){
-    document.getElementById("Pays de la Loire").style.display ="inline";
+    document.getElementById("Pays-de-la-Loire").style.display ="inline";
 
     hide();
     document.getElementById("Loire-Atlantique").style.display ="inline";
@@ -375,7 +285,7 @@ function show16(){
 }
 
 function show17(){
-    document.getElementById("Provence-Alpes-Côte d'Azur").style.display ="inline";
+    document.getElementById("Provence-Alpes-Côte-d'Azur").style.display ="inline";
 
     hide();
     document.getElementById("Alpes de Haute-Provence").style.display ="inline";
