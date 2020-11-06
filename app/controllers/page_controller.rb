@@ -14,7 +14,7 @@ class PageController < ApplicationController
         if !(params[:nom_reg].blank? || params[:nom_reg].include?("="))
             requete += " AND (nom_reg = '#{params[:nom_reg]}')"
         end
-        @scorescommunes = Scorecommune.where(requete).page(params[:page]).per(200)
+        @scorescommunes = Scorecommune.where(requete).page(params[:page]).per(25)
         @communes = Scorecommune.select("nom_com", "lib_ci", "nom_dep", "nom_reg").group("nom_com")
     end
 end
