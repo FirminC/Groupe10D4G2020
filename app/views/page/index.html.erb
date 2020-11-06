@@ -4,7 +4,7 @@
 <div class=filtre> 
     <h1>Recherche de votre Commune</h1>
     <div class=filtrep1> 
-        <p> Veuillez saisir votre code postal</p>
+        <p> Veuillez saisir votre code postale</p>
         <input id="cp">
     </div>
     <div class=filtrep2>
@@ -154,6 +154,7 @@
         <%end%>
     </select>
     </div>
+    <div class=filtrep3>
     <div class=comparatif>
         <p>Liste épinglés</p>
         <table>
@@ -161,12 +162,13 @@
                 <th>Nom de la commune</th>
             </tr>
         </table>
-        <input type="button" onclick='resultat()' value="Voir les résultats" class=submit>
+        <input type="button" onclick='resultat()' value="Voir les résultats" class='submit'>
     </div>
-    <div class=exporter>
-        <input type="button" onclick="generate()" value="Exporter les résultats en PDF" class=export/>
+
     </div>
 </div>
+
+    <%= paginate @scorescommunes %>
 
     <table class=bdd id=table>
         <tr>
@@ -203,4 +205,4 @@
             </tr>
         <%end%>
     </table>
-    <p class=paginate><%= paginate @scorescommunes %></p>
+<input type="button" onclick="generate()" value="Export To PDF"/>
