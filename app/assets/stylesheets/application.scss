@@ -87,7 +87,16 @@ body
         width: 100%;
 	    font-size: small;
         color: black;
-        font-weight:small; 
+        font-weight:small;
+        
+        p
+        {
+            margin:0 auto;
+            padding-left: 4vw;
+            padding-right: 4vw;
+            padding-bottom: 4vh;
+            text-align: justify;
+        }
     }
 
     footer
