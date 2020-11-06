@@ -155,7 +155,18 @@ function showAll_communes(params) {
 		styles: {
         fontSize: 8.2,
 			cellWidth: 'wrap'
-		},
+        },
+        columnStyles: {  
+            0: {  
+                cellWidth: 120,  
+            },  
+            1: {  
+                cellWidth: 60,  
+            },  
+            2: {  
+                cellWidth: 100,  
+            }
+        },
 	})
 	doc.save('Indice_de_fragilite.pdf');
 }
