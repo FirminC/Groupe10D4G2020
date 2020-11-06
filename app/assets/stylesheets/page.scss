@@ -85,7 +85,6 @@ table
         margin:0 auto;
         padding-bottom: 2vh;
         display:flex;
-        padding-bottom: 2vh;
         border-bottom: solid;
         border-color:#0a3e65;
         border-width: 0.1cm;
@@ -109,22 +108,18 @@ table
         }
     }
 
-    .filtrep3
-    {
-        margin:0 auto;
-        padding:0;
-        display:flex;
-        flex-direction: column;
-        width: auto;
-    }
 
     .comparatif
     {
         margin:0 auto;
-        padding:0;
+        padding-bottom: 2vh;
+        border-bottom: solid;
+        border-color:#0a3e65;
+        border-width: 0.1cm;
+        width: 100%;
         display:flex;
         flex-direction: column;
-        width: auto;
+        align-items: center;
 
         p
         {
@@ -140,12 +135,39 @@ table
             border: 1px solid #ccc;
 	        border-radius: 4px;
 	        box-sizing: border-box;
+            width: 80%;
         }
     }
+    .exporter
+    {
+        margin:0 auto;
+        padding-top: 2vh;
+        width: auto;
+        display:flex;
+        flex-direction: column;
+
+        .export
+        {
+            border: 1px solid #ccc;
+	        border-radius: 4px;
+	        box-sizing: border-box;
+        }
+    }   
 }
 
 .bdd
 {
     margin:0 auto;
     padding-left: 13vw;
+}
+
+.paginate
+{
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    padding: 0;
+    color: black;
+    font-size: large;
+    text-align: center; 
+    height: 100px;
 }
