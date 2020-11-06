@@ -47,6 +47,44 @@ function showAll_departement(){
     }
 }
 
+// ---------------------------------------------------------------------------------------
+function select_comcoms(param) {
+    if (param === "_blank") {
+        showAll_comcoms();
+    }else{
+        
+        var id_comcoms_select = document.getElementById("comcoms").selectedIndex;        
+
+        var class_comcoms_select = document.getElementById('comcoms').getElementsByTagName('option')[id_comcoms_select].getAttribute("class");
+
+        if (!(class_comcoms_select.includes(param))) {
+
+            document.getElementById('comcoms').getElementsByTagName('option')[0].selected = 'selected'; 
+        }
+        
+        hide_comcoms();
+
+        var comcoms = document.getElementsByClassName(param);
+        for (let i = 0; i < comcoms.length; i++) {
+            comcoms[i].style.display = "inline";
+        }
+    }
+}
+
+function hide_comcoms() {
+    var comcoms = document.getElementsByClassName("comcoms");
+    for (let i = 0; i < comcoms.length; i++) {
+        comcoms[i].style.display = "none";
+    }
+}
+
+function showAll_comcoms() {
+    var comcoms = document.getElementsByClassName("comcoms");
+    for (let i = 0; i < comcoms.length; i++) {
+        comcoms[i].style.display = "inline";
+    }
+}
+
 // --------------------------------------------------------------------------------------- 
 function select_communes(param) {
 
@@ -57,7 +95,7 @@ function select_communes(param) {
         var id_communes_select = document.getElementById("communes").selectedIndex;        
 
         var class_communes_select = document.getElementById('communes').getElementsByTagName('option')[id_communes_select].getAttribute("class");
-        alert(class_communes_select);
+
         if (!(class_communes_select.includes(param))) {
 
             document.getElementById('communes').getElementsByTagName('option')[0].selected = 'selected'; 
@@ -86,15 +124,38 @@ function showAll_communes(params) {
     }
 }
 
-// ---------------------------------------------------------------------------------------
-function select_comcoms(param) {
-    
-}
+//Conversion PDF
 
-function hide_comcoms() {
-    
-}
-
-function showAll_comcoms() {
-  
+    function generate() {
+	var doc = new jsPDF('p', 'pt', 'letter');
+	var htmlstring = '';
+	var tempVarToCheckPageHeight = 0;
+	var pageHeight = 0;
+	pageHeight = doc.internal.pageSize.height;
+	specialElementHandlers = {
+        // element with id of "bypass" - jQuery style selector
+        '#bypassme': function(element, renderer) {
+			// true = "handled elsewhere, bypass text extraction"
+			return true
+		}
+	};
+	margins = {
+        top: 150,
+		bottom: 60,
+		left: 40,
+		right: 40,
+		width: 600
+	};
+	var y = 20;
+	doc.setLineWidth(2);
+	doc.text(220, y = y + 30, "INDICE DE FRAGILITE");
+	doc.autoTable({
+        html: '#table',
+		startY: 60,
+		styles: {
+        fontSize: 8.2,
+			cellWidth: 'wrap'
+		},
+	})
+	doc.save('Indice_de_fragilite.pdf');
 }
