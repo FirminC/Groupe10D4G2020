@@ -159,3 +159,13 @@ function showAll_communes(params) {
 	})
 	doc.save('Indice_de_fragilite.pdf');
 }
+
+function pin(){
+    var class_char = document.getElementById("fav").getAttribute("class");
+    var newItem = document.createElement("LI");      
+    var textnode = document.createTextNode(class_char); 
+    newItem.appendChild(textnode);                 
+
+    var list = document.getElementById("tab_fav");    
+    list.insertBefore(newItem, list.childNodes[0]); 
+}

@@ -156,11 +156,10 @@
     </div>
     <div class=comparatif>
         <p>Liste épinglés</p>
-        <table>
-            <tr>
-                <th>Nom de la commune</th>
-            </tr>
-        </table>
+        <th>Nom de la commune</th>
+        <ul id="tab_fav">
+            
+        </ul>
         <input type="button" onclick='resultat()' value="Voir les résultats" class='submit'>
     </div>
     <div class=exporter>    
@@ -199,7 +198,7 @@
                 <td><%=commune.comp_numsco%></td>
                 <td><%=commune.global_acces%></td>
                 <td><%=commune.global_comp%></td>
-                <td><input type ="button" class="<%=commune.code_iris%>" onclick="pin(this)"></td>
+                <td><input type ="button" id="fav" class="<%=commune.nom_com%> <%=commune.code_iris%>" onclick="pin()"></td>
             </tr>
         <%end%>
     </table>
