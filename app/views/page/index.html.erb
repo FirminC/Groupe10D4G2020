@@ -139,7 +139,7 @@
 
         
         <select id="comcoms" onChange="select_communes(this.value);">
-            <option value="_blank"></option>
+            <option value="_blank" class="Null"></option>
                 <% @communes.each do |communes| %>
             <option id="<%=communes.lib_ci%>" class="<%=communes.nom_reg%> <%=communes.nom_dep%> <%=communes.lib_ci%> comcoms"><%=communes.lib_ci%></option>
                 <%end%>
