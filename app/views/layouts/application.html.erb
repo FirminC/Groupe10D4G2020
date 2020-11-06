@@ -4,7 +4,6 @@
     <title>Groupe 10</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,7 +11,8 @@
   <body>
     <div class="header">
       <div class="flexheaderc"><%= image_tag  "logo-inr.jpg", onload:"checkcookie()" %></div>
-      <div class="flexheaderc"><%= link_to  "Indice de Fragilité numérique", root_path %></div>
+      <div class="flexheaderc"><h1><%= link_to  "Indice de Fragilité numérique", root_path %></h1></div>
+      <div class="flexheaderc"><p>Version: Design For Green 2020<p></div>
     </div>
     <div class="maindiv">
       <%= yield %>

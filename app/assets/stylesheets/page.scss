@@ -109,22 +109,18 @@ table
         }
     }
 
-    .filtrep3
-    {
-        margin:0 auto;
-        padding:0;
-        display:flex;
-        flex-direction: column;
-        width: auto;
-    }
-
     .comparatif
     {
         margin:0 auto;
-        padding:0;
+        padding-bottom: 2vh;
         display:flex;
+        padding-bottom: 2vh;
+        border-bottom: solid;
+        border-color:#0a3e65;
+        border-width: 0.1cm;
+        width: 100%;
         flex-direction: column;
-        width: auto;
+        align-items: center;
 
         p
         {
@@ -136,6 +132,22 @@ table
         }
 
         .submit
+        {
+            border: 1px solid #ccc;
+	        border-radius: 4px;
+            box-sizing: border-box;
+        }
+    }
+
+    .exporter
+    {
+        margin:0 auto;
+        padding-top:2vh;
+        display:flex;
+        flex-direction: column;
+        width: auto;
+
+        .export
         {
             border: 1px solid #ccc;
 	        border-radius: 4px;
@@ -158,6 +170,12 @@ table
     color: black;
     font-size: large;
     text-align: center; 
-    height: 100px;
+    height: auto;
     width: 100%;
+
+    a
+    {
+        color:#0a3e65;
+        text-decoration: none;
+    }
 }
