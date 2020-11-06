@@ -15,7 +15,7 @@
         <p>Veuillez saisir votre région</p>
         <form action="/" method="get">
 
-         <select id="region" name="nom_reg" onChange="select_communes(this.value); select_comcoms(this.value); select_departement(this.value);">
+         <select id="region" name="nom_reg" onChange="select_departement(this.value);">
         <option value="_blank"></option>
         <option value="Auvergne-Rhône-Alpes">Auvergne-Rhône-Alpes</option>
         <option value="Bourgogne-Franche-Comté">Bourgogne-Franche-Comté</option>
@@ -36,7 +36,7 @@
 
         <p>Veuillez saisir votre département</p>
 
-    <select id="departement" name="nom_dep" onChange="select_communes(this.value); select_comcoms(this.value);">
+    <select id="departement" name="nom_dep">
         <option id="_blank" value="_blank" class="Null"></option>
         <option id="Ain" value="Ain" class="Auvergne-Rhône-Alpes departement">Ain</option>
         <option id="Aisne" value="Aisne" class="Hauts-de-France departement">Aisne</option>
@@ -139,9 +139,8 @@
 
         </select>
 
+<!--
         <p>Veuillez saisir votre communauté de commune</p>
-
-        <!--
         <select id="comcoms" onChange="select_communes(this.value);">
             <option value="_blank" class="Null"></option>
                 <% @communes.each do |communes| %>
